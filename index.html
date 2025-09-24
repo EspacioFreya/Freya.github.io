@@ -42,21 +42,23 @@
     a:hover{text-decoration:underline}
 
     /* Header */
-    header{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter:saturate(120%) blur(8px);
-      background:rgba(11,19,16,.75);
-      border-bottom:1px solid rgba(255,255,255,.06);
-    }
-    .wrap{max-width:1100px; margin:auto; padding:0 20px}
-    .nav{display:flex; align-items:center; justify-content:space-between; height:64px}
-    .brand{display:flex; align-items:center; gap:12px}
-    .logo{width:36px; height:36px; border-radius:50%; display:grid; place-items:center; background:conic-gradient(from 220deg, var(--accent), var(--accent-2)); box-shadow:var(--shadow)}
-    .brand h1{font-size:18px; margin:0; letter-spacing:.3px}
-    .menu{display:flex; gap:18px}
-    .menu a{color:var(--text); opacity:.9}
-    .menu a.active, .menu a:hover{color:var(--accent-2)}
-    .burger{display:none; background:none; border:0; color:var(--text); font-size:22px}
+header{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter:saturate(120%) blur(8px);
+  background:rgba(11,19,16,.75);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.wrap{max-width:1100px; margin:auto; padding:0 20px}
+.nav{display:flex; align-items:center; justify-content:space-between; height:64px}
+.brand{display:flex; align-items:center; gap:12px}
+.logo-img{width:40px;height:40px;object-fit:contain;filter: drop-shadow(0 6px 16px rgba(0,0,0,.35))}
+.brand h1{font-size:18px; margin:0; letter-spacing:.3px}
+.menu{display:flex; gap:18px}
+.menu a{color:var(--text); opacity:.9}
+.menu a.active, .menu a:hover{color:var(--accent-2)}
+.mobile{display:none}   /* ← AQUÍ */
+.burger{display:none; background:none; border:0; color:var(--text); font-size:22px}
+
 
     /* Hero */
     .hero{padding:72px 0 48px}
@@ -107,14 +109,16 @@
     footer{padding:28px 0; color:var(--muted); border-top:1px solid rgba(255,255,255,.06)}
 
     /* Responsive */
-    @media (max-width: 900px){
-      .hero-grid{grid-template-columns:1fr}
-      .grid-3{grid-template-columns:1fr}
-      .grid-2{grid-template-columns:1fr}
-      .menu{display:none}
-      .burger{display:inline-flex}
-      .mobile{display:none; flex-direction:column; gap:10px; padding:10px 0}
-      .mobile a{padding:10px 0; border-bottom:1px solid rgba(255,255,255,.06)}
+@media (max-width: 900px){
+  .hero-grid{grid-template-columns:1fr}
+  .grid-3{grid-template-columns:1fr}
+  .grid-2{grid-template-columns:1fr}
+  .menu{display:none}      /* oculta el menú de escritorio en móvil */
+  .burger{display:inline-flex}
+  .mobile{display:none; flex-direction:column; gap:10px; padding:10px 0}
+  .mobile a{padding:10px 0; border-bottom:1px solid rgba(255,255,255,.06)}
+}
+
     }
     @media (prefers-reduced-motion: reduce){
       html{scroll-behavior:auto}
@@ -158,9 +162,9 @@
     <section class="hero">
       <div class="hero-grid">
         <div>
-          <span class="tag">✨ Espacio Freya – Pole & Dance <br>
+          <span class="tag">✨ Espacio Freya – Pole & Dance ✨<br>
             Un lugar inspirado en la diosa Freya, donde mujeres y hombres encuentran fuerza, libertad y arte en cada clase de pole dance. <br>
-            Inclusión, respeto y motivación para que descubras tu poder y celebres el equilibrio entre disciplina y sensualidad.✨</span>
+            Inclusión, respeto y motivación para que descubras tu poder y celebres el equilibrio entre disciplina y sensualidad.</span>
           <h2>Clases de Pole Sport & Pole Exotic en La Florida</h2>
           <p class="lead">Nueva academia con instructoras e instructores. Cupos limitados: inscríbete antes de la apertura y asegura tu lugar.</p>
           <div class="cta">
