@@ -116,7 +116,7 @@ header{
   .mobile a{padding:10px 0; border-bottom:1px solid rgba(255,255,255,.06)}
 }
 
-    }
+    
     @media (prefers-reduced-motion: reduce){
       html{scroll-behavior:auto}
     }
@@ -146,7 +146,7 @@ header{
         </div>
         <div class="wrap">
         <nav id="mobileMenu" class="mobile" aria-label="Móvil">
-        <a href=\"#clases\" onclick=\"toggleMenu(false)\">Clases</a>
+        <a href="#clases\" onclick="toggleMenu(false)">Clases</a>
         <a href="#horarios" onclick="toggleMenu(false)">Horarios</a>
         <a href="#ubicacion" onclick="toggleMenu(false)">Ubicación</a>
         <a href="#contacto" onclick="toggleMenu(false)">Contacto</a>
@@ -338,6 +338,19 @@ header{
         </form>
       </div>
     </section>
+    <!-- MAPA -->
+<section id="mapa">
+<h3>Cómo llegar</h3>
+<p class="sub">Paso el Roble #40, La Florida · Santiago</p>
+<div class="card" style="overflow:hidden">
+<iframe class="map-embed"
+src="https://www.google.com/maps?q=Paso%20el%20Roble%2040%2C%20La%20Florida%2C%20Chile&output=embed"
+loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+title="Mapa: Paso el Roble 40, La Florida">
+</iframe>
+</div>
+<p class="note">¿Prefieres abrirlo en tu app? <a href="https://maps.google.com/?q=Paso%20el%20Roble%2040,%20La%20Florida" target="_blank" rel="noopener">Ver en Google Maps</a></p>
+</section>
   </main>
 
   <footer>
